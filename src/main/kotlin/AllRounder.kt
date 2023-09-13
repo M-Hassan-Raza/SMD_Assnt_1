@@ -8,12 +8,16 @@ class AllRounder(
     batsmanRanking: Int,
     val ranking: Int
 ) : Bowler(name, age, nationality, wickets, bowlerRanking), Batsman(name, age, nationality, score, batsmanRanking) {
+
     override fun print() {
-        super.print()
+        super<Batsman>.print()
+        super<Bowler>.print()
         println("Ranking: $ranking")
     }
 
     override fun getRanking() {
-        println("Ranking: $ranking")
+        super<Bowler>.getRanking()
+        super<Batsman>.getRanking()
+        println("Overall Ranking: $ranking")
     }
 }
