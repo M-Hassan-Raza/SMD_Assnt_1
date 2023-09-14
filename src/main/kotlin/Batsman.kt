@@ -1,13 +1,19 @@
-open class Batsman(name: String, age: Int, nationality: String, val score: Int, val batsmanRanking: Int) :
-    Cricketer(name, age, nationality), Ranking {
-
+data class Batsman(
+    override val name: String,
+    override val age: Int,
+    override val nationality: String,
+    override val score: Int,
+    override val batsmanRanking: Int
+) : BatsmanInfo {
     override fun print() {
-        super.print()
+        println("Name: $name")
+        println("Age: $age")
+        println("Nationality: $nationality")
         println("Score: $score")
         println("Batsman Ranking: $batsmanRanking")
     }
 
-    override fun getRanking() {
+    override fun getBatsmanRanking() {
         println("Batsman Ranking: $batsmanRanking")
     }
 }
