@@ -1,7 +1,14 @@
+import Cricketer
+import Bowler
+import Batsman
+import AllRounder
 fun main(args: Array<String>) {
-    println("Hello World!")
+    val bowler = Bowler("Alice", 28, "England", 150, 5)
+    val batsman = Batsman("Bob", 30, "Australia", 1000, 2)
+    val allRounder = AllRounder(bowler, batsman, 1)
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
+    allRounder.print()
+    allRounder.getBowlerRanking()
+    allRounder.getBatsmanRanking()
     println("Program arguments: ${args.joinToString()}")
 }
