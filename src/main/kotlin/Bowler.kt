@@ -1,19 +1,13 @@
-data class Bowler(
-    override val name: String,
-    override val age: Int,
-    override val nationality: String,
-    override val wickets: Int,
-    override val bowlerRanking: Int
-) : BowlerInfo {
+class Bowler(name: String, age: Int, nationality: String, val wickets: Int, val bowlerRanking: Int) :
+    Cricketer(name, age, nationality), Ranking {
+
     override fun print() {
-        println("Name: $name")
-        println("Age: $age")
-        println("Nationality: $nationality")
+        super.print()
         println("Wickets: $wickets")
         println("Bowler Ranking: $bowlerRanking")
     }
 
-    override fun getBowlerRanking() {
+    override fun getRanking() {
         println("Bowler Ranking: $bowlerRanking")
     }
 }
