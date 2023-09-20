@@ -1,5 +1,5 @@
 class Bowler(name: String, age: Int, nationality: String, val wickets: Int, val bowlerRanking: Int) :
-    Cricketer(name, age, nationality), Ranking {
+    Cricketer(name, age, nationality) {
 
     override fun print() {
         super.print()
@@ -7,7 +7,7 @@ class Bowler(name: String, age: Int, nationality: String, val wickets: Int, val 
         println("Bowler Ranking: $bowlerRanking")
     }
 
-    override fun getRanking() {
+    fun getRanking() {
         println("Bowler Ranking: $bowlerRanking")
     }
 }

@@ -7,20 +7,19 @@ class AllRounder(
     score: Int,
     batsmanRanking: Int,
     val ranking: Int
-) : Ranking {
+) : Batsman (name, age, nationality, score, batsmanRanking){
 
     private val bowler = Bowler(name, age, nationality, wickets, bowlerRanking)
-    private val batsman = Batsman(name, age, nationality, score, batsmanRanking)
 
-    fun print() {
+    override fun print() {
+        super.print()
         bowler.print()
-        batsman.print()
         println("Ranking: $ranking")
     }
 
     override fun getRanking() {
+        super.getRanking()
         bowler.getRanking()
-        batsman.getRanking()
         println("Overall Ranking: $ranking")
     }
 }
