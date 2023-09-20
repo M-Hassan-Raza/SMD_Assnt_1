@@ -1,3 +1,0 @@
-interface Ranking {
-    fun getRanking()
-}

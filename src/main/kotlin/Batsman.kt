@@ -1,5 +1,5 @@
-class Batsman(name: String, age: Int, nationality: String, val score: Int, val batsmanRanking: Int) :
-    Cricketer(name, age, nationality), Ranking {
+open class Batsman(name: String, age: Int, nationality: String, val score: Int, val batsmanRanking: Int) :
+    Cricketer(name, age, nationality) {
 
     override fun print() {
         super.print()
@@ -7,7 +7,7 @@ class Batsman(name: String, age: Int, nationality: String, val score: Int, val b
         println("Batsman Ranking: $batsmanRanking")
     }
 
-    override fun getRanking() {
+    open fun getRanking() {
         println("Batsman Ranking: $batsmanRanking")
     }
 }
